@@ -9,7 +9,7 @@ public:
         m_count = 0;
         std::for_each(data.begin(), data.end(), [&] (const int &element) {if (element % 3 == 0) {m_count++;}});
     }
-    operator()() {return m_count;}
+    auto operator()() {return m_count;}
 
 private:
     int m_count;
